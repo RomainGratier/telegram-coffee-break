@@ -38,7 +38,7 @@ Lang: en
 ## Usage example
 
 ```sh
-from telegrambot import TelegramBot
+from telegrambotalarm import TelegramBot
 
 TOKEN = 'NNNNNNNNNN:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 MYID = 'NNNNNNNNN'
