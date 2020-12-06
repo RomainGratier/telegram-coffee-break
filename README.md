@@ -14,16 +14,31 @@ pip install telegram-coffee-break
 
 ## Preparation
 
-You will need to create a new telegram bot as follow:
+** First: You will need to create a new telegram bot as follow: **
 
-Keep the token safe in a file and set your bot
+Go to the BotFather (if you open it in desktop, make sure you have the Telegram app), then create new bot by sending the /newbot command. Follow the steps until you get the username and token for your bot. You can go to your bot by accessing this URL: https://telegram.me/YOUR_BOT_USERNAME and your token should looks like this.
 
-Then ask this bot to give you your destination ID
+```sh
+7044NNNNN:AAEtcZ*************
+```
+
+Keep the token safe in a file and set your bot.
+
+** Next: You need to find your telegram ID **
+
+Go to the userinfobot and send /start. He will give you your personal ID.
+
+```sh
+Id: 871NNNNN
+First: lol
+Last: lolilol
+Lang: en
+```
 
 ## Usage example
 
 ```sh
-from telebotalarm import TelegramBot
+from telegrambot import TelegramBot
 
 TOKEN = 'NNNNNNNNNN:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 MYID = 'NNNNNNNNN'
