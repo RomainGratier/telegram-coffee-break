@@ -4,16 +4,16 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name = "telegrambot",
+    name = "telegram-coffee-break",
     version = "0.0.1",
     author = "Andrew Carter",
     author_email = "andrewjcarter@gmail.com",
-    url = "https://github.com/RomainGratier/telegrambot",
+    url = "https://github.com/RomainGratier/telegram-coffee-break",
     description = ("send telegram notification using a bot"),
     license = "MIT",
     keywords = "python telegram",
-    py_modules=["telegrambot"],
-    package_dir={"": "telegrambot"},
+    py_modules=["telegrambotalarm"],
+    package_dir={"": "telegrambotalarm"},
     long_description=long_description,
     long_description_content_type="text/markdown",
     classifiers=[

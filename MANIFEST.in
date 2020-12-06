@@ -1,3 +1,0 @@
-include *.py
-include LICENSE
-recursive-include telegrambot *.py

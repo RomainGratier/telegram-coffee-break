@@ -25,7 +25,19 @@ class TelegramBot:
                 'caption': caption}
         
         # POST the image
-        requests.post(url, data, files={'photo': open(PhotoPath, 'rb')}).json()
+        try:
+            requests.post(url, data, files={'photo': open(PhotoPath, 'rb')})
+            r.raise_for_status()
+
+        except requests.exceptions.HTTPError as errh:
+            print ("Http Error:",errh)
+            print('You might have a wrong token or ID')
+        except requests.exceptions.ConnectionError as errc:
+            print ("Error Connecting:",errc)
+        except requests.exceptions.Timeout as errt:
+            print ("Timeout Error:",errt)
+        except requests.exceptions.RequestException as err:
+            print ("OOps: Something Else",err)
     
     def send_message(self, message):
         """ It takes the bot token, an ID destination (should be yours if you want to receive the message) and your message. The function
@@ -44,4 +56,15 @@ class TelegramBot:
         data = {'chat_id': self.destinationID, 'text': message}
         
         # POST the message
-        requests.post(url, data).json()
+        try:
+            r = requests.post(url, data)
+            r.raise_for_status()
+        except requests.exceptions.HTTPError as errh:
+            print ("Http Error:",errh)
+            print('You might have a wrong token or ID')
+        except requests.exceptions.ConnectionError as errc:
+            print ("Error Connecting:",errc)
+        except requests.exceptions.Timeout as errt:
+            print ("Timeout Error:",errt)
+        except requests.exceptions.RequestException as err:
+            print ("OOps: Something Else",err)
