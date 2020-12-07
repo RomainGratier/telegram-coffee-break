@@ -37,6 +37,8 @@ Lang: en
 
 ## Usage example
 
+**Simple example where you simply receive a notification at a certain point in the progress of the code.**
+
 ```python
 from telegrambotalarm import TelegramBot
 
@@ -53,5 +55,39 @@ message = {
     test accuracy : test_acc
 }
 bot.send_message(message)
+bot.send_image('decision_tree.png', caption=message)
+```
+
+**Best example where you are informed if an error occurs during the execution of a piece of code.**
+
+```python
+from telegrambotalarm import TelegramBot
+
+TOKEN = 'NNNNNNNNNN:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+MYID = 'NNNNNNNNN'
+
+bot = TelegramBot(TOKEN, MYID)
+bot.send_message('Your code is running')
+
+import traceback
+
+# Run this
+try:
+    ... do modeling etc ...
+    X = df['X']
+    y = df['y']
+    model = RandomForestReg(100, 20, 3)
+    model.fit(X, y)
+    resutls = get_results(model, X_test, y_test)
+
+# If error occurs, send the error with its trace
+except Exception as e:
+    bot.send_message(traceback.format_exc())
+
+resutls = {
+    train accuracy : train_acc,
+    test accuracy : test_acc
+}
+bot.send_message(resutls)
 bot.send_image('decision_tree.png', caption=message)
 ```
