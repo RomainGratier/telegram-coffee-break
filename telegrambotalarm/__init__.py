@@ -1,1 +1,1 @@
-from .telegrambotalarm import TelegramBot
+from telegrambotalarm.telegrambotalarm import TelegramBot

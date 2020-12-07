@@ -65,33 +65,31 @@ bot.send_image('decision_tree.png', caption=message)
 **Best example where you are informed if an error occurs during the execution of a piece of code.**
 
 ```python
-from telegrambotalarm import TelegramBot
+def train_model():
+    ## do something ##
+    results = {
+        'train accuracy' : train_acc,
+        'test accuracy' : test_acc
+    }
+    return results
 
-TOKEN = 'NNNNNNNNNN:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-MYID = 'NNNNNNNNN'
+from telegrambotalarm import TelegramBot
+import traceback
+
+TOKEN = 'nnnnnnnnnn:xxxxxxxxxxxxxxxxxxxxx'
+MYID = 'nnnnnnnn'
 
 bot = TelegramBot(TOKEN, MYID)
-bot.send_message('Your code is running')
-
-import traceback
 
 # Run this
 try:
-    ... do modeling etc ...
-    X = df['X']
-    y = df['y']
-    model = RandomForestReg(100, 20, 3)
-    model.fit(X, y)
-    resutls = get_results(model, X_test, y_test)
+    results = train_model()
 
 # If error occurs, send the error with its trace
 except Exception as e:
-    bot.send_message(traceback.format_exc())
+    print(traceback.format_exc())
+    bot.send_error_message(traceback.format_exc())
 
-results = {
-    train accuracy : train_acc,
-    test accuracy : test_acc
-}
 bot.send_message(results)
 bot.send_image('decision_tree.png', caption=message)
 ```
