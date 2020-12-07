@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name = "telegram-coffee-break",
-    version = "0.1.1",
+    version = "0.1.2",
     author = "Romain Gratier",
     author_email = "romain.gratier@gmail.com",
     url = "https://github.com/RomainGratier/telegram-coffee-break",

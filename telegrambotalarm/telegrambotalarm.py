@@ -1,5 +1,5 @@
 import requests
-from telegrambotalarm.message import Message
+from message import Message
 
 class TelegramBot:
     """Telegram Bot
