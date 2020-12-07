@@ -28,6 +28,8 @@ Keep the token safe in a file and set your bot.
 
 **Next: You need to find your telegram ID**
 
+https://support.bigonechina.com/hc/en-us/articles/360008014894-How-to-get-the-Telegram-user-ID-
+
 Go to the userinfobot and send /start. He will give you your personal ID.
 
 ```sh
