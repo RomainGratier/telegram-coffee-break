@@ -5,14 +5,14 @@ with open("README.md", "r") as fh:
 
 setup(
     name = "telegram-coffee-break",
-    version = "0.1.2",
+    version = "0.2.0",
     author = "Romain Gratier",
     author_email = "romain.gratier@gmail.com",
     url = "https://github.com/RomainGratier/telegram-coffee-break",
     description = ("send telegram notification using a bot"),
     license = "MIT",
     keywords = "python telegram",
-    py_modules=["telegrambotalarm"],
+    py_modules=["telegrambotalarm", "message"],
     package_dir={"": "telegrambotalarm"},
     long_description=long_description,
     long_description_content_type="text/markdown",
