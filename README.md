@@ -88,10 +88,10 @@ try:
 except Exception as e:
     bot.send_message(traceback.format_exc())
 
-resutls = {
+results = {
     train accuracy : train_acc,
     test accuracy : test_acc
 }
-bot.send_message(resutls)
+bot.send_message(results)
 bot.send_image('decision_tree.png', caption=message)
 ```
