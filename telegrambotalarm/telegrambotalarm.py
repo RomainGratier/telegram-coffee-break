@@ -25,10 +25,10 @@ class TelegramBot:
         # Create json link with message
         data = {'chat_id': self.destinationID,
                 'caption': caption}
-        
+
         # POST the image
         try:
-            requests.post(url, data, files={'photo': open(PhotoPath, 'rb')})
+            r = requests.post(url, data, files={'photo': open(PhotoPath, 'rb')})
             r.raise_for_status()
 
         except requests.exceptions.HTTPError as errh:
