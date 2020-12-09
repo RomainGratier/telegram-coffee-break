@@ -14,9 +14,9 @@ pip install telegram-coffee-break
 
 ## Preparation
 
-**First: You will need to create a new telegram bot as follow:**
+Every details are explained in this post : https://romain-gratier.medium.com/create-a-simple-bot-with-telegram-that-notifies-you-about-the-progress-of-your-code-69bab685b9db
 
-https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-telegram?view=azure-bot-service-4.0
+**First: You will need to create a new telegram bot as follows:**
 
 Go to the BotFather (if you open it in desktop, make sure you have the Telegram app), then create new bot by sending the /newbot command. Follow the steps until you get the username and token for your bot. You can go to your bot by accessing this URL: https://telegram.me/YOUR_BOT_USERNAME and your token should looks like this.
 
@@ -27,8 +27,6 @@ Go to the BotFather (if you open it in desktop, make sure you have the Telegram 
 Keep the token safe in a file and set your bot.
 
 **Next: You need to find your telegram ID**
-
-https://support.bigonechina.com/hc/en-us/articles/360008014894-How-to-get-the-Telegram-user-ID-
 
 Go to the userinfobot and send /start. He will give you your personal ID.
 
