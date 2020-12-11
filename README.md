@@ -14,7 +14,7 @@ pip install telegram-coffee-break
 
 ## Preparation
 
-Every details are explained in this [post] on (https://romain-gratier.medium.com/create-a-simple-bot-with-telegram-that-notifies-you-about-the-progress-of-your-code-69bab685b9db) [<img src="https://github.com/RomainGratier/telegram-coffee-break/blob/main/documents/medium.png" width="100"/>](https://romain-gratier.medium.com/create-a-simple-bot-with-telegram-that-notifies-you-about-the-progress-of-your-code-69bab685b9db)
+Every details are explained in this [post](https://romain-gratier.medium.com/create-a-simple-bot-with-telegram-that-notifies-you-about-the-progress-of-your-code-69bab685b9db) on  [<img src="https://github.com/RomainGratier/telegram-coffee-break/blob/main/documents/medium.png" width="100"/>](https://romain-gratier.medium.com/create-a-simple-bot-with-telegram-that-notifies-you-about-the-progress-of-your-code-69bab685b9db)
 
 **First: You will need to create a new telegram bot as follows:**
 
